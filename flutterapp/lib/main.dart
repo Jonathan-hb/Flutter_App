@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'rest-api.dart';
 
@@ -30,13 +32,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String text = "";
-  String url = "51.15.137.206:8000";
+  String url = 'http://51.15.137.206:8000';
 
   void changeText(String text) {
     this.setState(() {
       this.text = text;
+      ApiService.getApi(url);
     });
-    /*ApiService.postApi(url, text);*/
   }
 
   @override
