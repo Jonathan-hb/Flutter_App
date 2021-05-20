@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void changeText(String text) {
     this.setState(() {
       this.text = text;
-      ApiService.getApi(url);
+      Future<List<dynamic>> test = ApiService.getApi(url);
     });
   }
 
